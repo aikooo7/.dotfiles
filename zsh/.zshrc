@@ -25,6 +25,7 @@ source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 source /opt/asdf-vm/asdf.sh
 export PATH=$PATH:$GOPATH/bin
+export PATH=$HOME/.dotfiles/sensitive_info:$PATH
 
 # Loads my .env variables.
 

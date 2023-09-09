@@ -1,4 +1,4 @@
-# My dotfiles dev branch
+# My dotfiles
 
 Hello, this my are my dotfiles here in one place.
 

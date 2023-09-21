@@ -1,6 +1,8 @@
 [submodule "nvim"]
 	path = nvim
 	url = https://github.com/aikooo7/nvim-config
+  branch = main
 [submodule "private_keys"]
 	path = private_keys
 	url = https://github.com/aikooo7/Private-keys
+  branch = main

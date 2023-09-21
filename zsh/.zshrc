@@ -26,6 +26,8 @@ export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 source /opt/asdf-vm/asdf.sh
 export PATH=$PATH:$GOPATH/bin
 export PATH=$HOME/.dotfiles/sensitive_info:$PATH
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
 export EDITOR=vim
 
 # Loads my .env variables.
@@ -80,3 +82,17 @@ eval "$(starship init zsh)"
 
 # I prefer zoxide over normal cd.
 eval "$(zoxide init zsh)"
+
+# pnpm
+export PNPM_HOME="/home/aiko/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+# bun completions
+[ -s "/home/aiko/.bun/_bun" ] && source "/home/aiko/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

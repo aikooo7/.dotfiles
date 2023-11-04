@@ -17,6 +17,18 @@ echo "                                    "
 echo "                                    "
 echo "                                    "
 
+#Automaticly runs tmux if not already running.
+if [ -z "$TMUX" ]; then
+  exec tmux new-session -A -s workspace
+fi
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Autocompletions like in fish.
 source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
@@ -46,11 +58,6 @@ alias vim="nvim"
 # I use it when I want to harden C/C++ binaries
 alias gccs="gcc -z noexecstack -fstack-protector-strong -fPIE -D_FORTIFY_SOURCE=2 -Wl,-z,relro,-z,now -O -s"
 
-#Automaticly runs tmux if not already running.
-
-if ! tmux run 2>/dev/null; then
-    tmux
-fi
 
 # Uses fzf with a beatifull preview and with the possibility of giving
 # a folder as a argument

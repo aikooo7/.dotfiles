@@ -36,7 +36,7 @@ source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 source /opt/asdf-vm/asdf.sh
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 export PATH=$HOME/.dotfiles/sensitive_info:$PATH
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"

@@ -55,8 +55,17 @@ alias cdi=__zoxide_zi
 # I'm more accustomed to it.
 alias vim="nvim"
 
+alias tmx ="tmux-sessionizer"
+
+# Saw in tj and liked it.
+
+alias ll="ls -la"
+
 # I use it when I want to harden C/C++ binaries
 alias gccs="gcc -z noexecstack -fstack-protector-strong -fPIE -D_FORTIFY_SOURCE=2 -Wl,-z,relro,-z,now -O -s"
+
+# Faster way to access lazygit
+alias lg="lazygit"
 
 
 # Uses fzf with a beatifull preview and with the possibility of giving

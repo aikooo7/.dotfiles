@@ -17,7 +17,7 @@ echo "                                    "
 echo "                                    "
 echo "                                    "
 
-#Automaticly runs tmux if not already running.
+#Automatically runs tmux if not already running.
 if [ -z "$TMUX" ]; then
   exec tmux new-session -A -s workspace
 fi

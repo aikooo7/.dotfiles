@@ -40,7 +40,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 export PATH=$HOME/.dotfiles/sensitive_info:$PATH
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
-export EDITOR=vim
+export EDITOR=nvim
 
 # Loads my .env variables.
 

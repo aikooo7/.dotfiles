@@ -37,6 +37,7 @@ export PATH=$HOME/venv/bin:$PATH
 export PATH=$HOME/.local/share/nvim/mason/bin:$PATH
 export PATH=$HOME/.dotfiles/scripts/:$PATH
 export EDITOR=nvim
+export GOBIN=$(go env GOROOT)/bin
 
 # Loads my .env variables.
 

@@ -19,7 +19,7 @@
 
 #Automatically runs tmux if not already running.
 if [ -z "$TMUX" ]; then
-  exec tmux new-session -A -s workspace
+  exec tmux new-session
 fi
 
 # Loads starship

@@ -34,6 +34,8 @@ fi
 
 # Autocompletions like in fish.
 source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# Loads starship
+eval "$(starship init zsh)"
 
 # Path stuff
 
@@ -96,8 +98,6 @@ fi
 export GPG_TTY=$(tty)
 gpg-connect-agent updatestartuptty /bye > /dev/null
 
-# Loads starship
-eval "$(starship init zsh)"
 # I prefer zoxide over normal cd.
 eval "$(zoxide init zsh)"
 

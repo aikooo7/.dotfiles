@@ -63,6 +63,8 @@ alias gccs="gcc -z noexecstack -fstack-protector-strong -fPIE -D_FORTIFY_SOURCE=
 alias lg="lazygit"
 
 
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 # Uses my gpg key as ssh key.
 unset SSH_AGENT_PID

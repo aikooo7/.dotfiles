@@ -49,6 +49,9 @@ alias cat="bat --style=auto"
 alias cd=__zoxide_z
 alias cdi=__zoxide_zi
 
+alias f="fzf --preview 'bat --style=numbers --color=always {}'"
+alias v="vim"
+alias vf="vim \$(f --height 40%)"
 # I'm more accustomed to it.
 alias vim="nvim"
 

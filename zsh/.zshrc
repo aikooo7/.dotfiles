@@ -22,18 +22,6 @@ if [ -z "$TMUX" ]; then
   exec tmux new-session -A -s workspace
 fi
 
-# Activates vim in zsh 
-# bindkey -v
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# Autocompletions like in fish.
-source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 # Loads starship
 eval "$(starship init zsh)"
 
@@ -75,20 +63,6 @@ alias gccs="gcc -z noexecstack -fstack-protector-strong -fPIE -D_FORTIFY_SOURCE=
 alias lg="lazygit"
 
 
-# Uses fzf with a beatifull preview and with the possibility of giving
-# a folder as a argument
-fv() {
-    local file
-    local start_dir="${1:-$(pwd)}" # Capture the optional folder argument
-                                   # else it uses pwd.
-
-    file=$(find $start_dir | fzf --preview "bat --color=always {}")
-    if [[ -d "$file" ]]; then
-        cd "$file"
-    else
-        [[ -n "$file" ]] && vim "$file"
-    fi
-}
 
 # Uses my gpg key as ssh key.
 unset SSH_AGENT_PID

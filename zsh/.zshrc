@@ -57,8 +57,9 @@ alias vim="nvim"
 
 alias tmx ="tmux-sessionizer"
 
-# Saw in tj and liked it.
-alias ll="ls -la"
+alias ll='ls -l'
+alias la='ls -al'
+alias l='ls -lah'
 
 # I use it when I want to harden C/C++ binaries
 alias gccs="gcc -z noexecstack -fstack-protector-strong -fPIE -D_FORTIFY_SOURCE=2 -Wl,-z,relro,-z,now -O -s"

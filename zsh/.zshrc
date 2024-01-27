@@ -29,7 +29,7 @@ eval "$(starship init zsh)"
 
 export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
 source /opt/asdf-vm/asdf.sh
-export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:$(go env GOROOT)/bin
 export PATH=$HOME/.dotfiles/sensitive_info:$PATH
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"

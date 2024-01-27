@@ -1,21 +1,21 @@
 # My welcome screen xD
 
-echo " ▄▄▄       ██▓ ██ ▄█▀ ▒█████        "
-echo "▒████▄   ▒▓██▒ ██▄█▒ ▒██▒  ██▒      "    
-echo "▒██  ▀█▄ ▒▒██▒▓███▄░ ▒██░  ██▒      "
-echo "░██▄▄▄▄██░░██░▓██ █▄ ▒██   ██░      "  
-echo "▒▓█   ▓██░░██░▒██▒ █▄░ ████▓▒░      "
-echo "░▒▒   ▓▒█ ░▓  ▒ ▒▒ ▓▒░ ▒░▒░▒░       "
-echo "░ ░   ▒▒ ░ ▒ ░░ ░▒ ▒░  ░ ▒ ▒░       "
-echo "  ░   ▒  ░ ▒ ░░ ░░ ░ ░ ░ ░ ▒        "
-echo "      ░    ░  ░  ░       ░ ░        "
-echo "                                    "
-echo "                                    "
-echo "                                    "
-echo "Welcome home!                       "
-echo "                                    "
-echo "                                    "
-echo "                                    "
+# echo " ▄▄▄       ██▓ ██ ▄█▀ ▒█████        "
+# echo "▒████▄   ▒▓██▒ ██▄█▒ ▒██▒  ██▒      "    
+# echo "▒██  ▀█▄ ▒▒██▒▓███▄░ ▒██░  ██▒      "
+# echo "░██▄▄▄▄██░░██░▓██ █▄ ▒██   ██░      "  
+# echo "▒▓█   ▓██░░██░▒██▒ █▄░ ████▓▒░      "
+# echo "░▒▒   ▓▒█ ░▓  ▒ ▒▒ ▓▒░ ▒░▒░▒░       "
+# echo "░ ░   ▒▒ ░ ▒ ░░ ░▒ ▒░  ░ ▒ ▒░       "
+# echo "  ░   ▒  ░ ▒ ░░ ░░ ░ ░ ░ ░ ▒        "
+# echo "      ░    ░  ░  ░       ░ ░        "
+# echo "                                    "
+# echo "                                    "
+# echo "                                    "
+# echo "Welcome home!                       "
+# echo "                                    "
+# echo "                                    "
+# echo "                                    "
 
 #Automatically runs tmux if not already running.
 if [ -z "$TMUX" ]; then
@@ -64,7 +64,6 @@ alias vim="nvim"
 alias tmx ="tmux-sessionizer"
 
 # Saw in tj and liked it.
-
 alias ll="ls -la"
 
 # I use it when I want to harden C/C++ binaries
@@ -76,7 +75,6 @@ alias lg="lazygit"
 
 # Uses fzf with a beatifull preview and with the possibility of giving
 # a folder as a argument
-
 fv() {
     local file
     local start_dir="${1:-$(pwd)}" # Capture the optional folder argument
@@ -90,7 +88,6 @@ fv() {
     fi
 }
 
-
 # Uses my gpg key as ssh key.
 unset SSH_AGENT_PID
 if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
@@ -101,7 +98,6 @@ gpg-connect-agent updatestartuptty /bye > /dev/null
 
 # Loads starship
 eval "$(starship init zsh)"
-
 # I prefer zoxide over normal cd.
 eval "$(zoxide init zsh)"
 
